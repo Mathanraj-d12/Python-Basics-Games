@@ -11,7 +11,7 @@ def clear_screen():
 print("🧠 Memory Game – Try to remember the number!")
 
 while True:
-    number = random.randint(100, 9999)  # random number with 3–4 digits
+    number = random.randint(100, 999999999)  # random number with 3–4 digits
     print("Remember this number:", number)
 
     time.sleep(3)  # show for 3 seconds
