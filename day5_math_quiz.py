@@ -16,12 +16,13 @@ while True:
     print("Question:", question)
     user_answer = input("Your answer: ")
 
-    # Check for numeric input
-    if not user_answer.isdigit():
+    try:
+        user_answer = int(user_answer)   # supports -7, +5, 0, etc.
+    except ValueError:
         print("❌ Invalid input. Game over!")
         break
 
-    if int(user_answer) == correct_answer:
+    if user_answer == correct_answer:
         score += 1
         print("✅ Correct! Score:", score, "\n")
     else:
